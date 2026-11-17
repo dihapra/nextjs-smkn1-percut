@@ -1,0 +1,23 @@
+# 🔒 INTI — setiap Pull Request dicek: file yang berubah harus di zona kelompok.
+# Nama branch WAJIB diawali id kelompok, mis. "pplg/hero" atau "beranda/statistik".
+# Branch "inti/..." (guru) boleh mengubah semua file.
+name: Cek Zona Kelompok
+on: pull_request
+
+jobs:
+  cek-zona:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/cek-zona.mjs --base origin/${{ github.base_ref }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run build

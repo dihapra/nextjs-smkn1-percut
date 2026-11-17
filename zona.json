@@ -1,0 +1,39 @@
+{
+  "$catatan": "Peta kepemilikan file. Hanya guru yang boleh mengubah file ini. Dipakai oleh README, AGENTS.md, npm run cek-zona, dan hook Claude Code.",
+  "zona": {
+    "beranda": {
+      "nama": "Beranda & Profil Sekolah",
+      "url": "/",
+      "paths": ["konten/sekolah/", "public/sekolah/"]
+    },
+    "pplg": {
+      "nama": "Pengembangan Perangkat Lunak dan Gim",
+      "url": "/jurusan/pplg",
+      "paths": ["konten/jurusan/pplg/", "public/jurusan/pplg/"]
+    },
+    "tjkt": {
+      "nama": "Teknik Jaringan Komputer dan Telekomunikasi",
+      "url": "/jurusan/tjkt",
+      "paths": ["konten/jurusan/tjkt/", "public/jurusan/tjkt/"]
+    },
+    "dkv": {
+      "nama": "Desain Komunikasi Visual",
+      "url": "/jurusan/dkv",
+      "paths": ["konten/jurusan/dkv/", "public/jurusan/dkv/"]
+    },
+    "akl": {
+      "nama": "Akuntansi dan Keuangan Lembaga",
+      "url": "/jurusan/akl",
+      "paths": ["konten/jurusan/akl/", "public/jurusan/akl/"]
+    },
+    "mplb": {
+      "nama": "Manajemen Perkantoran dan Layanan Bisnis",
+      "url": "/jurusan/mplb",
+      "paths": ["konten/jurusan/mplb/", "public/jurusan/mplb/"]
+    }
+  },
+  "inti": {
+    "nama": "Inti (guru/fasilitator)",
+    "paths": ["*"]
+  }
+}
